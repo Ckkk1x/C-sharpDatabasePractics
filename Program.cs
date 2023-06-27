@@ -16,7 +16,7 @@ namespace MAIN_PROJECT
             Console.WriteLine(man2);
             man2.GenerarNombreTemporal();
             Console.WriteLine(man2);
-            //Мельниченко
+            
             Console.ReadLine();
         }
     }

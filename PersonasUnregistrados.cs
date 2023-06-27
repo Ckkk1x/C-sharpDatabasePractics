@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MAIN_PROJECT
 {
-    public class PersonasUnregistrados : Personaje
+    abstract public class PersonasUnregistrados : Personaje
     {
         private string nombreTemporal;
 
@@ -36,21 +36,13 @@ namespace MAIN_PROJECT
                     name += rnd.Next(10); // [97 - 122]
             }
 
-            this.nombreTemporal = name;
+            NombreTemporal = name;
             return name;
         }
 
-        //TODO - delete
-        public override void Eliminarse()
-        {
-            Console.WriteLine("Eliminarse()");
-        }
-        //------------
-
-
         public override string ToString()
         {
-            return base.ToString() + $"\nnombreTemporal = {this.nombreTemporal}";
+            return base.ToString() + $"\nnombreTemporal = {NombreTemporal}";
         }
     }
 }

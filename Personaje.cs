@@ -59,7 +59,7 @@ namespace MAIN_PROJECT
         /// </summary>
         abstract public void Eliminarse();
 
-        public void LeerBD()
+        public virtual void LeerBD()
         {
             // hemos recibido nombre de classe en que estamos
             Type name = typeof(Personaje);
@@ -88,7 +88,7 @@ namespace MAIN_PROJECT
         }
 
         
-        public void EliminarDeBD(int id)
+        public virtual void EliminarDeBD(int id)
         {
             // hemos recibido nombre de classe en que estamos
             Type name = typeof(Personaje);
@@ -111,7 +111,7 @@ namespace MAIN_PROJECT
                 }
             }
         }
-        public void InsertarEnBD(string ip, bool estaBloqueado, Estado estado)
+        public virtual void InsertarEnBD(string ip, bool estaBloqueado, Estado estado)
         {
             // hemos recibido nombre de classe en que estamos
             Type name = typeof(Personaje);
