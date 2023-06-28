@@ -17,6 +17,18 @@ namespace MAIN_PROJECT
         public int Mes { get => mes; set => mes = value; }
         public int Ano { get => ano; set => ano = value; }
 
+        public Date()
+        {
+            Dia = 0;
+            Mes = 0;    
+            Ano = 0;
+        }
+        public Date(int dia, int mes, int ano)
+        {
+            Dia = dia;
+            Mes = mes;
+            Ano = ano;
+        }
 
         static public bool Compare(Date firstDate, Date secondDate)
         {

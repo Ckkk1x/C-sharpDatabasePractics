@@ -14,7 +14,7 @@ namespace MAIN_PROJECT
         private bool estaBloqueado;
         private Estado estado;
 
-        private static string ruta = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\xinde\source\repos\MAIN_PROJECT\MainDB.mdb";
+        protected static string ruta = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\xinde\source\repos\MAIN_PROJECT\MainDB.mdb";
 
         private static int cantidadDeUsers;
         public int Id { get => id; set => id = value; }
@@ -54,10 +54,7 @@ namespace MAIN_PROJECT
         {
             return estaBloqueado;
         }
-        /// <summary>
-        /// Для того что бы иметь возможность удалить пользователя
-        /// </summary>
-        abstract public void Eliminarse();
+        
 
         public virtual void LeerBD()
         {

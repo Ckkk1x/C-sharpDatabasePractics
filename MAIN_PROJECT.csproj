@@ -47,10 +47,12 @@
     <Compile Include="Date.cs" />
     <Compile Include="Espectador.cs" />
     <Compile Include="Personaje.cs" />
+    <Compile Include="PersonasRegistrados.cs" />
     <Compile Include="PersonasUnregistrados.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TEspectadores.cs" />
+    <Compile Include="userDeJuego.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

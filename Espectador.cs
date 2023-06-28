@@ -13,12 +13,6 @@ namespace MAIN_PROJECT
 
         public Date TiempoDeAcceso { get => tiempoDeAcceso; set => tiempoDeAcceso = value; }
 
-        public override void Eliminarse()
-        {
-            //eliminamos personaje en bd
-
-        }
-
         public void CambiarTiempoDeAcceso(Date tiempo)
         {
             TiempoDeAcceso = tiempo;
