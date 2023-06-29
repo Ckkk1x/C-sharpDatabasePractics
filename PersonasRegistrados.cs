@@ -14,7 +14,7 @@ namespace MAIN_PROJECT
         private string clave;
         private string nombrePublico;
 
-        public string Login { get => login; set => login = value; }
+        protected string Login { get => login; set => login = value; }
         public string Clave { get => clave; set => clave = value; }
         public string NombrePublico { get => nombrePublico; set => nombrePublico = value; }
 
@@ -34,6 +34,12 @@ namespace MAIN_PROJECT
             
             if(contrasena.Length <= 8)
             {
+                Console.WriteLine("Entra mas de 8 symbolos");
+                return false;
+            }
+            else if(contrasena == Login)
+            {
+                Console.WriteLine("Login y Clave hay que ser diferentes");
                 return false;
             }
 

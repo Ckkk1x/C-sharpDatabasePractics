@@ -12,15 +12,16 @@ namespace MAIN_PROJECT
         private int id;
         private string ip;
         private bool estaBloqueado;
-        private Estado estado;
+        private Estado estadoDeUser; // Atencion! En DB se llama estado.
 
-        protected static string ruta = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\xinde\source\repos\MAIN_PROJECT\MainDB.mdb";
+        public static readonly string ruta = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Public\Documents\game2\C-sharpDatabasePractics\MainDB.mdb";
 
         private static int cantidadDeUsers;
         public int Id { get => id; set => id = value; }
         public string Ip { get => ip; set => ip = value; }
-        internal Estado Estado1 { get => estado; set => estado = value; }
+        public Estado EstadoDeUser { get => estadoDeUser; set => estadoDeUser = value; }
         public static int CantidadDeUsers { get => cantidadDeUsers; set => cantidadDeUsers = value; }
+        public bool EstaBloqueado { get => estaBloqueado; set => estaBloqueado = value; }
 
         public enum Estado { offline, online,  hidden};
 
@@ -28,8 +29,8 @@ namespace MAIN_PROJECT
         {
             id = cantidadDeUsers;
             ip = null;
-            estaBloqueado = false;
-            estado = Estado.hidden;
+            EstaBloqueado = false;
+            EstadoDeUser = Estado.hidden;
 
             cantidadDeUsers++;
         }
@@ -37,22 +38,22 @@ namespace MAIN_PROJECT
         {
             id = cantidadDeUsers;
             this.ip = ip;
-            estaBloqueado = false;
-            this.estado = estado;
+            EstaBloqueado = false;
+            this.estadoDeUser = estado;
 
             cantidadDeUsers++;
         }
         public void Bloquearse()
         {
-            estaBloqueado = true;
+            EstaBloqueado = true;
         }
         public void Desbloquearse()
         {
-            estaBloqueado = false;
+            EstaBloqueado = false;
         }
         public bool GetEstadoDeBloque()
         {
-            return estaBloqueado;
+            return EstaBloqueado;
         }
         
 
@@ -211,7 +212,7 @@ namespace MAIN_PROJECT
         }
         public override string ToString()
         {
-            return $"id = {this.id}\nip = {this.ip ?? "null"}\nestaBloqueado = {this.estaBloqueado}\nestado = {this.estado}";
+            return $"id = {this.id}\nip = {this.ip ?? "null"}\nestaBloqueado = {this.EstaBloqueado}\nestado = {this.estadoDeUser}";
         }
 
     }
