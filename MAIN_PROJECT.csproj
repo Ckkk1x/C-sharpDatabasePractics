@@ -49,7 +49,6 @@
     <Compile Include="Personaje.cs" />
     <Compile Include="PersonasRegistrados.cs" />
     <Compile Include="PersonasUnregistrados.cs" />
-    <Compile Include="PremiumUser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TEspectadores.cs" />
